@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Login - Araleve</title>
 </head>
 <body>
-    
+    <section class="login">
+        <div class="container">
+            <div class="container-login">
+                <img src="assets/Logo.png" alt="Logo Araleve">
+                <form method="post" action="#">
+                    <div class="campo">
+                        <label>Usuário</label>
+                        <input type="text" name="usuario" placeholder="Usuário" required>
+                    </div>
+                    <div class="campo">
+                        <label>Senha</label>
+                        <input type="password" name="senha" placeholder="Senha" required>
+                    </div>
+                    <div class="esquecer">
+                        <div class="salvar-senha">
+                            <input type="checkbox" id="lembrar_senha" name="senha-salva" value="salvar_senha">
+                            <label for="lembrar_senha">Lembrar senha</label>
+                        </div>
+
+                        <div class="esqueceu-senha">
+                            <a href="#">Esqueci minha senha?</a>
+                        </div>
+                    </div>
+                    <button metodh="post" type="submit">Acessar</button>
+                </form>
+            </div>
+            <div class="container-img">
+                <img src="assets/Register.jpg" alt="Icone-login">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
