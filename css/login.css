@@ -21,7 +21,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px;
-    width: 1024px;
+    width: 80%;
     background-color: #fff;
     flex: 0 1 1024px;
     box-shadow: 2px 3px 30px #000;
