@@ -10,9 +10,7 @@ body {
     min-height: 100vh;
 }
 main {
-    width: 100vw;
-    position: fixed;
-    z-index: 1;
+    width: 100%;
 }
 /* Seção Menu Suspenso */
 
@@ -39,14 +37,11 @@ main {
     flex-direction: column;
     justify-content: space-between;
     background-color: #fff;
-    height: 95vh;
+    height: 100vh;
     position: relative;
     transition: all .5s;
     min-width: 82px;
     box-shadow: 1px 0px 3px;
-    border-radius: 0px 30px 0 0 ;
-    margin-top: 5%;
-    position: fixed;
     z-index: 2;
 }
 
