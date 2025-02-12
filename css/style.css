@@ -12,6 +12,7 @@ body {
 main {
     width: 100%;
 }
+
 /* Seção Menu Suspenso */
 
 #user {
@@ -141,6 +142,7 @@ main {
     font-size: 14px;
     transition: width .6s;
     height: 0px;
+    text-align: center;
 }
 
 #sidebar.open-sidebar {
@@ -207,7 +209,7 @@ header,
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 20px;
 }
 
