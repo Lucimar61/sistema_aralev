@@ -16,6 +16,11 @@
 </head>
 <body>
     <nav id="sidebar">
+        <!-- Botão para expandir o menu lateral -->
+        <button id="open_btn">
+            <img id="open_btn_icon" class="menu_expansivel" src="assets/Menu Lateral.png" alt="Icone">
+        </button>
+
         <div id="user">
             <img src="assets/Perfil.png" id="user_avatar" alt="avatar">
             <p id="user_infos">
@@ -59,14 +64,9 @@
             </ul>
         </div>
 
-        <!-- Botão para expandir o menu lateral -->
-        <button id="open_btn">
-            <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
-        </button>
-
         <!-- Botão de configurações -->
-        <div id="logout">
-            <button id="logout_btn">
+        <div id="config">
+            <button id="config_btn">
                 <img src="assets/config.png" class="fa-solid fa-right-from-bracket"></img>
                 <span class="item-description">
                     Configurações
@@ -79,7 +79,7 @@
     <main>
         <header>
             <div class="cabecalho">
-                <img src="assets/Menu Lateral.png" alt="Icone">
+                <div class="div-oculta"></div>
                 <img src="assets/Logo.png" alt="Logo">
                 <div class="container-modulos">
                     <img src="assets/Modulos.png" alt="Modulos">
@@ -103,8 +103,8 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#">Hoje</a></li>
-                            <li><a href="#">7 dias</a></li>
+                            <li class="active-date"><a href="#">Hoje</a></li>
+                            <li ><a href="#">7 dias</a></li>
                             <li><a href="#">30 dias</a></li>
                             <li><a href="#">90 dias</a></li>
                             <li><a href="#">Anual</a></li>
@@ -140,6 +140,22 @@
                         </figure>
                         <p>2</p>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="secao-dashboard">
+            <div class="container-dashboards">
+                <div class="card-dash">
+                    <div></div>
+                    <img src="assets/Edit1.png" alt="Botão edição">
+                </div>
+                <div class="card-dash card2">
+                    <div></div>
+                    <img src="assets/Edit1.png" alt="Botão edição">
+                </div>
+                <div class="card-dash">
+                    <div></div>
+                    <img src="assets/Edit1.png" alt="Botão edição">
                 </div>
             </div>
         </div>
