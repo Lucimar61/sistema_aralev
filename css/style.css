@@ -374,7 +374,8 @@ header,
     height: 85%;
 }
 
-.container_frm_cadastro {
+.container_frm_cadastro,
+.container_frm_pedido {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -384,9 +385,11 @@ header,
     height: 97%;
 }
 
-.container_frm_cadastro form {
+.container_frm_cadastro form,
+.container_frm_pedido form {
     height: 90%;
     display: flex;
+    flex-direction: column;
     gap: 20px;
     margin-left: 50px;
 }
@@ -410,7 +413,8 @@ header,
     padding-right: 10px;
 }
 
-.container_frm_cadastro form fieldset {
+.container_frm_cadastro form fieldset,
+.container_frm_pedido form fieldset {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -419,7 +423,8 @@ header,
     padding: 15px;
 }
 
-.container_frm_cadastro form fieldset legend {
+.container_frm_cadastro form fieldset legend,
+.container_frm_pedido form fieldset legend {
     font-size: 24px;
     font-weight: 700;
 }
@@ -442,6 +447,7 @@ header,
 
 .info-produtos {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -475,7 +481,8 @@ header,
     border-radius: 5px;
 }
 
-.container-enviar-dados button {
+.container-enviar-dados button,
+.container-enviar-pedido button {
     padding: 15px;
     width: 180px;
     border: none;
@@ -494,7 +501,8 @@ header,
     padding-right: 30px;
 }
 
-.btn_salvar::before {
+.btn_salvar::before,
+.btn_emitir::before {
     content: "";
     background-image: url("../assets/btn_salvar.png");
     background-size: cover;
@@ -510,7 +518,8 @@ header,
 }
 
 .btn_cancelar:hover,
-.btn_salvar:hover {
+.btn_salvar:hover,
+.btn_emitir:hover {
     background-color: #cccccc80;
     color: #000;
 }
