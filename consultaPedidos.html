@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Buscar Pedidos</title>
+</head>
+<body>
+    <nav id="sidebar">
+        <!-- Botão para expandir o menu lateral -->
+        <button id="open_btn">
+            <img id="open_btn_icon" class="menu_expansivel" src="assets/Menu Lateral.png" alt="Icone">
+        </button>
+
+        <div id="user">
+            <img src="assets/Perfil.png" id="user_avatar" alt="avatar">
+            <p id="user_infos">
+                <span class="item-description">
+                    Desenvolvedor
+                </span>
+                <span class="item-description">
+                    Lorem Ipsum
+                </span>
+            </p>
+        </div>
+
+        <div id="sidebar_content">
+            <ul id="side-items">
+                <li class="side-item">
+                    <a href="inicio.html">
+                        <img src="assets/Home1.png" class="fa-solid fa-chart-line"></img>
+                        <span class="item-description">
+                            Página Principal
+                        </span>
+                    </a>
+                </li>
+                <li class="side-item">
+                    <a href="pedido.html">
+                        <img src="assets/Vendas.png" class="fa-solid fa-user"></img>
+                        <span class="item-description">
+                            Vendas
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item active">
+                    <a href="cad_produto.html">
+                        <img src="assets/estoque.png" class="fa-solid fa-bell"></img>
+                        <span class="item-description">
+                            Estoque
+                        </span>
+                    </a>
+                </li>
+    
+            </ul>
+        </div>
+
+        <!-- Botão de configurações -->
+        <div id="config">
+            <button id="config_btn">
+                <img src="assets/config.png" class="fa-solid fa-right-from-bracket"></img>
+                <span class="item-description">
+                    Configurações
+                </span>
+            </button>
+        </div>
+    </nav>
+    
+
+    <main>
+        <header>
+            <div class="cabecalho">
+                <div class="div-oculta"></div>
+                <img src="assets/Logo.png" alt="Logo">
+                <div class="container-modulos">
+                    <img src="assets/Modulos.png" alt="Modulos">
+                    <img src="assets/Notificações.png" alt="Notificações">
+                    <div class="perfil">
+                        <img src="assets/Perfil.png" alt="Foto de Perfil">
+                        <div class="perfil-descricao">
+                            <p>Admin</p>
+                            <p>Desenvolvedor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="secao-indicadores estoque-indicadores">
+            <div class="container-indicadores">
+                <div class="container-navegacao">
+                    <div class="navegacao">
+                        <img src="assets/Home1.png" alt="Home">
+                        <p>Vendas <strong>></strong> Pedidos</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Seção do formulário de cadastro de produtos -->
+        <div class="secao-cadastro">
+            <div class="container_frm_cadastro">
+                <div class="frm_titulo">
+                    <img src="assets/cad_produtos.png" alt="Caixa de produtos">
+                    <h1>BUCA DE PEDIDOS</h1>
+                </div>
+                    
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </th>
+                            <th>
+                                <h3>ID</h3>
+                                <input type="text" name="busca_id">
+                            </th>
+                            <th>
+                                <h3>Nome</h3>
+                                <input type="text" name="busca_nome">
+                            </th>
+                            <th>
+                                <h3>CPF/CNPJ</h3>
+                                <input type="text" name="busca_CPF">
+                            </th>
+                            <th>
+                                <h3>Celular</h3>
+                                <input type="text" name="busca_celular">
+                            </th>
+                            <th>
+                                <h3>Rua</h3>
+                                <input type="text" name="busca_rua">
+                            </th>
+                            <th>
+                                <h3>Número</h3>
+                                <input type="text" name="busca_numero">
+                            </th>
+                            <th>
+                                <h3>Bairro</h3>
+                                <input type="text" name="busca_bairro">
+                            </th>
+                            <th>
+                                <h3>Cidade</h3>
+                                <input type="text" name="busca_cidade">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                    
+                    <div id="popUp" class="popUp">
+                        <div class="popUp-container">
+                            <p>Você está prestes a cadastrar um produto. <strong>Tem certeza que deseja cadastrar esse produto.</strong></p>
+                            <button id="close_popUp" class="btn_cancelar" >Cancelar</button>
+                            <button id="open_popUp" class="btn_salvar" type="submit" method="post" >Salvar</button>
+                        </div>
+                    </div>
+                              
+            </div>
+        </div>
+    </main>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
