@@ -73,7 +73,6 @@
             </button>
         </div>
     </nav>
-    
 
     <main>
         <header>
@@ -107,16 +106,27 @@
         <!-- Seção do formulário de cadastro de produtos -->
         <div class="secao-cadastro">
             <div class="container_frm_cadastro">
-                <div class="frm_titulo">
-                    <img src="assets/cad_produtos.png" alt="Caixa de produtos">
-                    <h1>BUCA DE PEDIDOS</h1>
+
+                <!-- Seção de filtro de buscas dos pedidos -->
+                <div class="frm_pedidos">
+                    <img src="assets/filtro.png" alt="Ícone de Filtro">
+                    <label for="filtro">Filtrar por: </label>
+                    <select name="filtro" id="filtro">
+                        <option value="nome">Nome</option>
+                        <option value="cpf_cnpj">CPF/CNPJ</option>
+                        <option value="bairro">Bairro</option>
+                        <option value="cidade">Cidade</option>
+                    </select>
+                    <input type="text" id="buscar_pedidos" name="buscar_pedidos" placeholder="Digite sua busca...">
+                    <button id="btnBuscar">Buscar</button>
                 </div>
-                    
+                
+                <!-- Tabela de pedidos -->
                 <table>
                     <thead>
                         <tr>
                             <th class="checkbox-check">
-                                <input type="checkbox" class="checkbox" >
+                                <input type="checkbox" class="checkbox" id="selecionar-todos">
                             </th>
                             <th>
                                 <h3>ID</h3>
@@ -152,7 +162,39 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tabela-pedidos">
+                        <tr>
+                            <td class="checkbox-check">
+                                <div>
+                                    <input type="checkbox" class="checkbox" >
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" class="pedido-link">123445</a>
+                            </td>
+                            <td>Nome do Cliente</td>
+                            <td>000.000.000-00</td>
+                            <td>(99) 99999-9999</td>
+                            <td>Rua Exemplo</td>
+                            <td>100</td>
+                            <td>Bairro Exemplo</td>
+                            <td>Cidade Exemplo</td>
+                        </tr>
+                        <tr>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
+                            <td>
+                                <a href="#" class="pedido-link">1231234</a>
+                            </td>
+                            <td>Nome do Cliente</td>
+                            <td>000.000.000-00</td>
+                            <td>(99) 99999-9999</td>
+                            <td>Rua Exemplo</td>
+                            <td>100</td>
+                            <td>Bairro Exemplo</td>
+                            <td>Cidade Exemplo</td>
+                        </tr>
                         <tr>
                             <td class="checkbox-check">
                                 <input type="checkbox" class="checkbox" >
@@ -167,18 +209,9 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -189,18 +222,9 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -211,18 +235,9 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -233,18 +248,9 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -255,18 +261,9 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -277,18 +274,9 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -299,7 +287,9 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -310,7 +300,61 @@
                             <td></td>
                         </tr>
                         <tr>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="checkbox-check">
+                                <input type="checkbox" class="checkbox" >
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -322,14 +366,6 @@
                         </tr>
                     </tbody>
                 </table>
-                    
-                    <div id="popUp" class="popUp">
-                        <div class="popUp-container">
-                            <p>Você está prestes a cadastrar um produto. <strong>Tem certeza que deseja cadastrar esse produto.</strong></p>
-                            <button id="close_popUp" class="btn_cancelar" >Cancelar</button>
-                            <button id="open_popUp" class="btn_salvar" type="submit" method="post" >Salvar</button>
-                        </div>
-                    </div>
                               
             </div>
         </div>
