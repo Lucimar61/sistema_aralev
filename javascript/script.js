@@ -1,7 +1,32 @@
-// Deixando o menu sidebar dinâmico
-document.getElementById('open_btn').addEventListener('click', function() {
-    document.getElementById('sidebar').classList.toggle('open-sidebar');
-});
+
+// Função para adicionar eventos ao botão da sidebar
+function adicionarEventosSidebar() {
+    // Deixando o menu sidebar dinâmico
+    document.getElementById('open_btn').addEventListener('click', function() {
+        document.getElementById('sidebar').classList.toggle('open-sidebar');
+    });
+}
+
+// Função para definir o link ativo na sidebar
+function destacarPaginaAtual() {
+    // Obtém a URL da página
+    let paginaAtual = window.location.pathname.split("/").pop();
+
+    // Seleciona todos os links da sidebar
+    let links = document.querySelectorAll(".side-item a");
+
+    links.forEach(link => {
+        // Se o href do link contém o nome da página atual, adiciona a classe 'active'
+        if (link.getAttribute("href").split("/").pop() === paginaAtual) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+}
+
+// Executa a função após carregar a sidebar
+document.addEventListener("DOMContentLoaded", destacarPaginaAtual);
 
 // Exibindo pop up na tela de cadastro de produtos
 function abrirPopUp() {
@@ -125,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Pega todas as linhas da tabela
         const linhas = tabelaPedidos.querySelectorAll("tr");
-        
+
         linhas.forEach(linha => {
 
             // Pega todo o texto da linha
