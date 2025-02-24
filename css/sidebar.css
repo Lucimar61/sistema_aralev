@@ -86,7 +86,7 @@
 }
 
 /* Destacar a cor de fundo e do texto quando o link estiver ativo */
-.side-item.active {
+.side-item a.active {
     background-color: var(--cor-secundaria);
     color: var(--cor-branca);
     font-weight: bold;

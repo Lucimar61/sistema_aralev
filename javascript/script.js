@@ -11,14 +11,18 @@ function adicionarEventosSidebar() {
 function destacarPaginaAtual() {
     // Obtém a URL da página
     let paginaAtual = window.location.pathname.split("/").pop();
+    console.log(`Página Atual: ${paginaAtual}`); // Verifica se o valor está correto
 
     // Seleciona todos os links da sidebar
     let links = document.querySelectorAll(".side-item a");
 
     links.forEach(link => {
+        let href = link.getAttribute("href").split("/").pop(); // Obtém o nome do arquivo do href
+        console.log(`Verificando link: ${href}`);
         // Se o href do link contém o nome da página atual, adiciona a classe 'active'
         if (link.getAttribute("href").split("/").pop() === paginaAtual) {
             link.classList.add("active");
+            console.log(`✅ Classe active adicionada ao link: ${href}`);
         } else {
             link.classList.remove("active");
         }
