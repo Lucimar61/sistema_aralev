@@ -8,6 +8,7 @@
 /* Definindo variaveis para cores */
 :root {
    --cor-hover: #e3e9f7; 
+   --cor-azul-principal: #005DB5;
 }
 
 body {
