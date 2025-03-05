@@ -74,14 +74,14 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
     font-size: 18px;
-    gap: 10px;
+    gap: 15px;
 }
 
 .campo {
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 .campo input {
@@ -89,6 +89,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    
 }
 
 .esquecer {
@@ -98,6 +99,8 @@ body {
     justify-content: space-between;
     font-size: 13px;
     margin-top: 0;
+    gap: 8px;
+    padding: 10px;
 }
 
 .salvar-senha {
@@ -124,6 +127,68 @@ button {
 
 button:hover {
     background-color: #003d82;
+}
+
+ /* Estilização do formulário de recuperação */
+ #form-recuperacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Adicionado espaçamento entre os elementos */
+    border-radius: 8px;
+    width: 90%;
+}
+
+#form-recuperacao h3 {
+    margin-bottom: 10px;
+}
+
+#form-recuperacao .campo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#form-recuperacao input {
+    padding: 15px 0px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#form-recuperacao .botoes-enviar {
+    display: flex;
+    padding: 20px 0px;
+    gap: 10px;
+}
+
+#form-recuperacao button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#form-recuperacao button[type="submit"] {
+    background-color: #fff;
+    color: #000;
+}
+
+#form-recuperacao button[type="submit"]:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#form-recuperacao button[type="button"] {
+    background-color: red;
+    color: #fff;
+}
+
+#form-recuperacao button[type="button"]:hover {
+    background-color: #ccc;
+    color: #000;
 }
 
 /* Responsividade */

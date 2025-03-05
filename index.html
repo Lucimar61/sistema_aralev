@@ -10,6 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Login - Araleve</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const linkRecuperacao = document.querySelector(".esqueceu-senha a");
+            const formRecuperacao = document.getElementById("form-recuperacao");
+            const formLogin = document.getElementById("form-login");
+            const btnCancelar = document.querySelector("#form-recuperacao button[type='button']");
+            
+            linkRecuperacao.addEventListener("click", function(event) {
+                event.preventDefault();
+                formLogin.style.display = "none";
+                formRecuperacao.style.display = "block";
+            });
+            
+            btnCancelar.addEventListener("click", function() {
+                formRecuperacao.style.display = "none";
+                formLogin.style.display = "block";
+            });
+        });
+    </script>
 </head>
 <body>
     <section class="login">
@@ -19,7 +38,7 @@
             </div>
             <div class="container-login">
                 <img src="assets/Logo.png" alt="Logo Araleve">
-                <form method="post" action="#">
+                <form method="post" action="#" id="form-login">
                     <div class="campo">
                         <label>Usuário</label>
                         <input type="text" name="usuario" placeholder="Usuário" required>
@@ -35,10 +54,22 @@
                         </div>
 
                         <div class="esqueceu-senha">
-                            <a href="inicio.html">Esqueci minha senha?</a>
+                            <a href="#">Esqueci minha senha?</a>
                         </div>
                     </div>
                     <button type="submit">Acessar</button>
+                </form>
+
+                <form id="form-recuperacao" method="post" action="#" style="display: none;">
+                    <h3>Recuperar Senha</h3>
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="botoes-enviar">
+                        <button type="submit">Enviar</button>
+                        <button type="button" onclick="toggleRecuperacaoSenha();">Cancelar</button>
+                    </div>
                 </form>
             </div>
             
