@@ -16,7 +16,7 @@
         <div class="container">
             <div class="container-login">
                 <img src="assets/Logo.png" alt="Logo Araleve">
-                <form method="post" action="#">
+                <form id="loginForm" method="post"> <!-- Removido o action para testar com fetch -->
                     <div class="campo">
                         <label>Usuário</label>
                         <input type="text" name="usuario" placeholder="Usuário" required>
@@ -35,13 +35,15 @@
                             <a href="#">Esqueci minha senha?</a>
                         </div>
                     </div>
-                    <button metodh="post" type="submit">Acessar</button>
+                    <button type="submit">Acessar</button>
                 </form>
+            
             </div>
             <div class="container-img">
                 <img src="assets/Register.jpg" alt="Icone-login">
             </div>
         </div>
     </section>
+    <script src="javascript/login.js"></script> 
 </body>
 </html>
