@@ -493,3 +493,15 @@ tr.selecionado {
     background-color: #ADD8E6 !important; /* Amarelo destaque */
     font-weight: bold;
 }
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto; /* Ativa a rolagem horizontal */
+    white-space: nowrap; /* Impede que o conteúdo quebre linha */
+}
+
+table {
+    width: 100%;
+    min-width: 1200px; /* Ajuste conforme necessário */
+    border-collapse: separate;
+}

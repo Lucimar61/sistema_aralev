@@ -24,7 +24,7 @@ body {
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
     background-color: #fff;
@@ -32,21 +32,24 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
-    height: 70vh;
+    height: 85vh;
+    min-height: 50vh;
+    max-width: 90%;
+    flex-shrink: 0;
 }
 
 .container-img {
     flex: 1;
-    min-width: 400px;
+    max-width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container-img img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+    min-height: auto;
+    max-width: 70%;
+    height: 90%;
 }
 
 .container-login {
@@ -58,8 +61,10 @@ body {
     background-color: #007bff;
     color: white;
     border-radius: 10px;
+    max-width: 50%;
     min-width: 400px;
     height: auto;
+    flex-shrink: 1;
 }
 
 .container-login img {
@@ -196,12 +201,16 @@ button:hover {
     .container {
         flex-direction: column;
         align-items: center;
+        height: auto;
+        width: 90%;
+        padding: 20px;
     }
-    .container-login, .container-img {
-        width: 100%;
-        min-width: unset;
+    .container-img {
+       display: none;
     }
     .container-login {
+        max-width: 100%;
+        min-width: unset;
         padding: 20px;
     }
 }

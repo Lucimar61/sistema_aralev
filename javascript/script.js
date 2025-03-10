@@ -195,9 +195,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const numero = form.numero_casa.value.trim();
         const UF = form.UF.value.trim();
         const cidade = form.cidade.value.trim();
+        const produto = form.nome_produto.value.trim();
+        const quantidade = form.quantidade_produto.value.trim();
+        const desconto = form.desconto.value.trim();
+        const subtotal = form.subtotal.value.trim();
+        const forma_pgto = form.forma_pagamento.value.trim();
+        const parcelas = form.quantidade_parcelas.value.trim();
+        const total = form.total_pagamento.value.trim();
+        const dataVencimento = form.vencimento_pg.value.trim();
+
 
         // Verificar se os campos obrigatórios estão preenchidos
-        if (!nome || !celular || !cpfCnpj || !rua || !numero || !cidade || !UF) {
+        if (
+            !nome || !celular || !cpfCnpj || !rua || !numero || !cidade || !UF ||
+            !produto || !quantidade || !desconto || !subtotal || !forma_pgto ||
+            !parcelas || !total || !dataVencimento
+        ) {
             alert("Preencha todos os campos obrigatórios!");
             return;
         }
@@ -214,7 +227,15 @@ document.addEventListener("DOMContentLoaded", function () {
             rua,
             numero,
             UF,
-            cidade
+            cidade,
+            produto,
+            quantidade,
+            desconto,
+            subtotal,
+            forma_pgto,
+            parcelas,
+            total,
+            dataVencimento
         };
 
         // Recuperar pedidos existentes ou criar um novo array
@@ -256,6 +277,14 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>${pedido.numero}</td>
             <td>${pedido.UF}</td> 
             <td>${pedido.cidade}</td>
+            <td>${pedido.produto}</td>
+            <td>${pedido.quantidade}</td>
+            <td>${pedido.desconto}</td>
+            <td>${pedido.subtotal}</td>
+            <td>${pedido.forma_pgto}</td>
+            <td>${pedido.parcelas}</td>
+            <td>${pedido.total}</td>
+            <td>${pedido.dataVencimento}</td>
         `;
 
         // Adicionar a nova linha ao tbody da tabela
